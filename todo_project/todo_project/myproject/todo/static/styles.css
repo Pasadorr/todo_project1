@@ -1,0 +1,52 @@
+body {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.container {
+    display: flex; /* Используем flex для создания колонок */
+    justify-content: space-between; /* Добавляем отступы между колонками */
+    padding: 20px;
+    opacity: 1;
+}
+
+.column {
+    flex: 1; /* Позволяем колонкам занимать равное пространство */
+    margin: 0 10px; /* Отступы между колонками */
+    background-color: #34495e; /* Темный фон для колонок */
+    border-radius: 8px;
+    padding: 20px;
+    opacity: 1;
+}
+
+.task-list {
+    list-style: none; /* Убираем стандартные стили списка */
+    padding: 0;
+    opacity: 1;
+}
+
+.task-list li {
+    background-color: #ecf0f1; /* Цвет фона для задачи */
+    color: #2c3e50; /* Цвет текста для задачи */
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0;
+    transition: opacity 0.3s ease;
+    opacity: 1; /* Начальное состояние для анимации */
+}
+
+.task-list li.show {
+    opacity: 1; /* Задача становится видимой */
+}
+
+.task-list li.completed {
+    background-color: red; /* Цвет для завершенной задачи */
+    color: white; /* Цвет текста для завершенной задачи */
+}
+
+.completed {
+    text-decoration: line-through; /* Для зачеркивания текста */
+    color: gray; /* Цвет для завершенной задачи */
+    opacity: 0.5; /* Пример эффекта прозрачности */
+    transition: all 0.5s ease; /* Плавный переход для анимации */
+}

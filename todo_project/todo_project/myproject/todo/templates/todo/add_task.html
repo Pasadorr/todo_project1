@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить задачу</title>
+</head>
+<body>
+    <h1>Добавить новую задачу</h1>
+    <form method="POST">  <!-- Используем метод POST -->
+        {% csrf_token %}  <!-- Включаем защиту CSRF -->
+        {{ form.as_p }}  <!-- Отображение формы, форматируя её как параграфы -->
+        <button type="submit">Добавить задачу</button>
+    </form>
+
+    <a href="{% url 'task_list' %}">Назад к списку задач</a>  <!-- Ссылка для возврата на главную страницу со списком задач -->
+</body>
+</html>
